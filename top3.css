@@ -1,0 +1,58 @@
+#body_wrap {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+#header, #main, .aside1, .aside2, #footer {
+  flex: 1 100%;
+}
+
+#header {
+  background: tomato;
+}
+#main {
+  background: lightgreen;
+}
+.aside1{
+  background: gold;
+}
+.aside2 {
+  background: hotpink;
+}
+
+#footer {
+  background: green;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 }
+}
+
+@media all and (min-width: 900px) {
+
+  #main {
+    flex: 1;
+    order: 2;
+    }
+
+  #header {order: 1}
+  .aside1 {order: 3}
+  .aside2 {order: 4}
+  #footer {order: 5}
+}
+
+#rest1, #rest2, #rest3 {
+height: 250px;
+}
+#rest3 {
+  float: right;
+}
+#rest1 {
+  float: left;
+}
+
+p::first-letter {
+  font-family: cursive;
+  font-size: 30px;
+  color: white;
+}
